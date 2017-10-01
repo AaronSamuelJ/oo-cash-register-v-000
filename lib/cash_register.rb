@@ -10,7 +10,6 @@ class CashRegister
   end
   def add_item(title, price, qty=0)
     @last_item[:cost] = price
-    @last_item[:amount] = price * qty if qty > 0
     if qty > 0
       qty.times do
         @items << title
